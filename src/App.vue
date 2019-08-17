@@ -25,7 +25,14 @@ export default {
   components: {
     AppDrumPad
   },
-
+  mounted() {
+    let recaptchaScript = document.createElement("script");
+    recaptchaScript.setAttribute(
+      "src",
+      "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+    );
+    document.head.appendChild(recaptchaScript);
+  }
 };
 </script>
 
